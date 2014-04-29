@@ -15,8 +15,8 @@ public class MainActivity extends Activity {
 	
 	private TextView mResultView;
 	
-	private float mLatitude;
-	private float mLongitude;
+	private float mLatitude = 23.72f;
+	private float mLongitude = 90.39f;
 	private String mLocationName;
 
 	@Override
@@ -29,6 +29,8 @@ public class MainActivity extends Activity {
 	
 	public void onPickLocationClick(View view) {
 		Intent intent = new Intent(this, LocationPickerActivity.class);
+		intent.putExtra(LocationPickerActivity.LATITUDE, mLatitude);
+		intent.putExtra(LocationPickerActivity.LONGITUDE, mLongitude);
 		startActivityForResult(intent, REQUEST_CODE);
 	}
 	

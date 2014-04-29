@@ -20,7 +20,7 @@ public class LocationPickerActivity extends Activity {
 
 	private Float latitude = 0f;
 	private Float longitude = 0f;
-	private Integer zoom = 5;
+	private Integer zoom = 15;
 	private String locationName;
 	
 	public static final String LATITUDE = "lat";
@@ -59,7 +59,8 @@ public class LocationPickerActivity extends Activity {
 			@Override
 			public void onProgressChanged(WebView view, int progress) {
 				if (progress == 100) {
-					locationPickerView.loadUrl("javascript:activityInitialize(" + latitude + "," + longitude + "," + zoom + ")");
+					load();
+					System.out.println("Log " + latitude + ", " + longitude);
 				}
 			}
 		});
@@ -76,6 +77,11 @@ public class LocationPickerActivity extends Activity {
 			}
 		});
 		// ^^^
+	}
+	
+	private void load() {
+		locationPickerView.loadUrl("javascript:activityInitialize(" + latitude + "," + longitude + "," + zoom + ")");
+		locationPickerView.loadUrl("javascript:activityPerformZoom(0)");
 	}
 
 	public class LocationPickerJSInterface {
