@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	
+    <item
+        android:id="@+id/zoomIncreaseButton"
+        android:showAsAction="always"
+        android:onClick="onZoomInClick"
+        android:icon="@drawable/ic_action_zoom_in"
+		android:title="@string/locationpicker_button_zoom_in"/>
+	
+    <item
+        android:id="@+id/zoomDecreaseButton"
+        android:showAsAction="always"
+        android:onClick="onZoomOutClick"
+        android:icon="@drawable/ic_action_zoom_out"
+		android:title="@string/locationpicker_button_zoom_out"/>
+
+    <item
+        android:id="@+id/action_ok"
+        android:showAsAction="always"
+        android:onClick="onOkClick"
+        android:icon="@drawable/ic_action_accept"
+        android:title="@string/ok"/>
+</menu>
