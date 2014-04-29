@@ -20,9 +20,9 @@ public class LocationPickerActivity extends Activity {
 	private WebView locationPickerView;
 	private EditText searchText;
 
-	private Float latitude = 0f;
-	private Float longitude = 0f;
-	private Integer zoom = 16;
+	private double latitude = 0f;
+	private double longitude = 0f;
+	private int zoom = 16;
 	private String locationName;
 	
 	public static final String LATITUDE = "lat";
@@ -38,16 +38,16 @@ public class LocationPickerActivity extends Activity {
 		setContentView(R.layout.activity_location_picker);
 
 		if (savedInstanceState != null) {
-			latitude = savedInstanceState.getFloat("latitude");
-			longitude = savedInstanceState.getFloat("longitude");
+			latitude = savedInstanceState.getDouble("latitude");
+			longitude = savedInstanceState.getDouble("longitude");
 			zoom = savedInstanceState.getInt("zoom");
 			locationName = savedInstanceState.getString("locationName");
 		}
 		else {
 			// If a default latitude/longitude value has already been passed to it
 			// through intent, then load that value
-			latitude = getIntent().getFloatExtra(LATITUDE, 0.0f);
-			longitude = getIntent().getFloatExtra(LONGITUDE, 0.0f);
+			latitude = getIntent().getDoubleExtra(LATITUDE, 0.0f);
+			longitude = getIntent().getDoubleExtra(LONGITUDE, 0.0f);
 		}
 
 		// LOCATION PICKER WEBVIEW SETUP
@@ -99,8 +99,8 @@ public class LocationPickerActivity extends Activity {
 	public class LocationPickerJSInterface {
 		@JavascriptInterface 
 		public void getValues(String latitude, String longitude, String zoom, String locationName){
-			LocationPickerActivity.this.latitude = Float.parseFloat(latitude);
-			LocationPickerActivity.this.longitude = Float.parseFloat(longitude);
+			LocationPickerActivity.this.latitude = Double.parseDouble(latitude);
+			LocationPickerActivity.this.longitude = Double.parseDouble(longitude);
 			LocationPickerActivity.this.zoom = Integer.parseInt(zoom);
 			LocationPickerActivity.this.locationName = locationName;
 		}
@@ -108,8 +108,8 @@ public class LocationPickerActivity extends Activity {
 
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
-		outState.putFloat("latitude", latitude);
-		outState.putFloat("longitude", longitude);
+		outState.putDouble("latitude", latitude);
+		outState.putDouble("longitude", longitude);
 		outState.putInt("zoom", zoom);
 		outState.putString("locationName", locationName);
 	}

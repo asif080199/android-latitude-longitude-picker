@@ -15,8 +15,8 @@ public class MainActivity extends Activity {
 	
 	private TextView mResultView;
 	
-	private float mLatitude = 23.726f;
-	private float mLongitude = 90.393f;
+	private double mLatitude = 23.726;
+	private double mLongitude = 90.393;
 	private String mLocationName;
 
 	@Override
@@ -42,8 +42,8 @@ public class MainActivity extends Activity {
 		if (requestCode == REQUEST_CODE) {
 			if (resultCode == Activity.RESULT_OK) {
 				// Get your selected location
-				mLatitude = data.getFloatExtra(LocationPickerActivity.LATITUDE, 0);
-				mLongitude = data.getFloatExtra(LocationPickerActivity.LONGITUDE, 0);
+				mLatitude = data.getDoubleExtra(LocationPickerActivity.LATITUDE, 0);
+				mLongitude = data.getDoubleExtra(LocationPickerActivity.LONGITUDE, 0);
 				mLocationName = data.getStringExtra(LocationPickerActivity.LOCATION_NAME);
 				
 				mResultView.setText("Latitude = " + mLatitude
