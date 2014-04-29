@@ -67,7 +67,7 @@ public class LocationPickerActivity extends Activity {
 					if (dialog != null)
 						dialog.dismiss();
 					
-					Toast.makeText(LocationPickerActivity.this, "Double tap to set marker",
+					Toast.makeText(LocationPickerActivity.this, "Double tap anywhere to set marker",
 							Toast.LENGTH_LONG).show();
 				}
 			}

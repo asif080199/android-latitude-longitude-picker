@@ -9,7 +9,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:imeOptions="actionSearch"
-		android:hint="@string/search"
+		android:hint="Search"
 		android:layout_margin="4dp"
 		android:layout_marginBottom="16dp"
 		android:inputType="text"/>

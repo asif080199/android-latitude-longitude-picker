@@ -3,9 +3,4 @@
 
     <string name="app_name">Location Picker</string>
 
-    <string name="locationpicker_button_zoom_in">Zoom In</string>
-    <string name="locationpicker_button_zoom_out">Zoom Out</string>
-    <string name="ok">OK</string>
-    <string name="search">Search</string>
-
 </resources>
