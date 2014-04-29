@@ -1,34 +1,33 @@
 # Android Latitude and Longitude Picker
 
-Android code to display a location picker. The user can select a point on the map, and the code returns the latitude and longitude value, and the name of the place according to Google.
+Android code to display a location picker. The user can select a point on the map, and the code returns the latitude and longitude value, and the name of the place according to Google Map.
 
 (For the time being this project works as a wrapper for the jQuery latitude and longitude picker project. Read about it more: [github.com/wimagguc/jquery-latitude-longitude-picker-gmaps](https://github.com/wimagguc/jquery-latitude-longitude-picker-gmaps))
 
-## Future plans
-
-This is a simple wrapper project just yet. It's fully usable (as seen in the Divespy Android app), but the plan is to add these modifications as soon as possible:
-
-* a standalone Activity which you can call with startActivityForResult on Android
-* use a native Google Maps object instead of the jQuery one
 
 ## Install
 
-Simply create and Android project and add the following files:
+Simply create an Android project and add the following files:
 
 * com/wimagguc/locationpicker/LocationPickerActivity.java
 * assets/locationPicker/*
 * res/layout/activity_location_picker.xml
-* res/values/strings.xml
+* res/menu/location_picker.xml
+* res/drawable-*
 
 Then modify the AndroidManifest.xml to include this activity:
 
-```
+```xml
 <application …>
-  <activity android:name=".LocationPickerActivity"/>
+  <activity
+     android:name="com.wimagguc.locationpicker.LocationPickerActivity"
+     android:uiOptions="splitActionBarWhenNarrow" />
 </application>
 ```
 
-The app is should work on every API v8 and API v17 device.
+## Compatibility
+
+The app is should work on any Android device with API level 11+. To use it in API 8+, use Actionbar Sherlock/Appcompat and modify files accordingly (for example, replace `Activity` with `SherlockActivity`, fix `Menu` and `MenuItem` imports etc.).
 
 ## License
 
@@ -44,9 +43,16 @@ This code uses the jQuery Javascript library and the Google Maps API. To read mo
 
 ## About
 
-Richard Dancsi  
-[www.wimagguc.com](http://www.wimagguc.com/)  
+Richard Dancsi
+[www.wimagguc.com](http://www.wimagguc.com/)
 
-twitter: [@wimagguc](http://twitter.com/wimagguc)  
-linkedin: [linkedin.com/in/richarddancsi](http://linkedin.com/in/richarddancsi)  
-gplus: [plus.google.com/u/0/115939246085616544919](https://plus.google.com/u/0/115939246085616544919)  
+twitter: [@wimagguc](http://twitter.com/wimagguc)
+linkedin: [linkedin.com/in/richarddancsi](http://linkedin.com/in/richarddancsi)
+gplus: [plus.google.com/u/0/115939246085616544919](https://plus.google.com/u/0/115939246085616544919) 
+
+
+Rafi Kamal
+[rafi-kamal.com](http://rafi-kamal.com/)
+
+linkedin: [linkedin.com/in/rafikamal](http://linkedin.com/in/rafikamal)
+gplus: [plus.google.com/+RafiKamal](https://plus.google.com/+RafiKamal) 
