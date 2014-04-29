@@ -2,6 +2,7 @@ package com.wimagguc.locationpicker;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -12,6 +13,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LocationPickerActivity extends Activity {
 
@@ -20,12 +22,14 @@ public class LocationPickerActivity extends Activity {
 
 	private Float latitude = 0f;
 	private Float longitude = 0f;
-	private Integer zoom = 15;
+	private Integer zoom = 16;
 	private String locationName;
 	
 	public static final String LATITUDE = "lat";
 	public static final String LONGITUDE = "lang";
 	public static final String LOCATION_NAME = "location_name";
+	
+	private ProgressDialog dialog;
 
 	@Override
 	@SuppressLint("SetJavaScriptEnabled")
@@ -60,7 +64,11 @@ public class LocationPickerActivity extends Activity {
 			public void onProgressChanged(WebView view, int progress) {
 				if (progress == 100) {
 					load();
-					System.out.println("Log " + latitude + ", " + longitude);
+					if (dialog != null)
+						dialog.dismiss();
+					
+					Toast.makeText(LocationPickerActivity.this, "Double tap to set marker",
+							Toast.LENGTH_LONG).show();
 				}
 			}
 		});
@@ -77,6 +85,10 @@ public class LocationPickerActivity extends Activity {
 			}
 		});
 		// ^^^
+		
+		dialog = new ProgressDialog(this);
+		dialog.setMessage("Loading Map...");
+		dialog.show();
 	}
 	
 	private void load() {

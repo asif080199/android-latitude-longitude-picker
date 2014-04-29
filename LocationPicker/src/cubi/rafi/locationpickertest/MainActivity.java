@@ -15,8 +15,8 @@ public class MainActivity extends Activity {
 	
 	private TextView mResultView;
 	
-	private float mLatitude = 23.72f;
-	private float mLongitude = 90.39f;
+	private float mLatitude = 23.726f;
+	private float mLongitude = 90.393f;
 	private String mLocationName;
 
 	@Override
