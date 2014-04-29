@@ -29,8 +29,11 @@ public class MainActivity extends Activity {
 	
 	public void onPickLocationClick(View view) {
 		Intent intent = new Intent(this, LocationPickerActivity.class);
+		
+		// The map will be initialized with this latitude and longitude (Optional)
 		intent.putExtra(LocationPickerActivity.LATITUDE, mLatitude);
 		intent.putExtra(LocationPickerActivity.LONGITUDE, mLongitude);
+		
 		startActivityForResult(intent, REQUEST_CODE);
 	}
 	
@@ -38,6 +41,7 @@ public class MainActivity extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (requestCode == REQUEST_CODE) {
 			if (resultCode == Activity.RESULT_OK) {
+				// Get your selected location
 				mLatitude = data.getFloatExtra(LocationPickerActivity.LATITUDE, 0);
 				mLongitude = data.getFloatExtra(LocationPickerActivity.LONGITUDE, 0);
 				mLocationName = data.getStringExtra(LocationPickerActivity.LOCATION_NAME);
