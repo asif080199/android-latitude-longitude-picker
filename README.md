@@ -6,7 +6,7 @@ Android code to display a location picker. The user can select a point on the ma
 
 
 ## Screenshot
-[!Screenshot](https://raw.githubusercontent.com/rafi-kamal/android-latitude-longitude-picker/master/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/rafi-kamal/android-latitude-longitude-picker/master/screenshot.png)
 
 ## Install
 
@@ -51,13 +51,13 @@ This code uses the jQuery Javascript library and the Google Maps API. To read mo
 Richard Dancsi
 [www.wimagguc.com](http://www.wimagguc.com/)
 
-twitter: [@wimagguc](http://twitter.com/wimagguc)
-linkedin: [linkedin.com/in/richarddancsi](http://linkedin.com/in/richarddancsi)
-gplus: [plus.google.com/u/0/115939246085616544919](https://plus.google.com/u/0/115939246085616544919) 
+* twitter: [@wimagguc](http://twitter.com/wimagguc)
+* linkedin: [linkedin.com/in/richarddancsi](http://linkedin.com/in/richarddancsi)
+* gplus: [plus.google.com/u/0/115939246085616544919](https://plus.google.com/u/0/115939246085616544919) 
 
 
 Rafi Kamal
 [rafi-kamal.com](http://rafi-kamal.com/)
 
-linkedin: [linkedin.com/in/rafikamal](http://linkedin.com/in/rafikamal)
-gplus: [plus.google.com/+RafiKamal](https://plus.google.com/+RafiKamal) 
+* linkedin: [linkedin.com/in/rafikamal](http://linkedin.com/in/rafikamal)
+* gplus: [plus.google.com/+RafiKamal](https://plus.google.com/+RafiKamal) 
