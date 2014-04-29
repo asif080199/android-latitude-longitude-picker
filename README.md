@@ -49,7 +49,7 @@ This code uses the jQuery Javascript library and the Google Maps API. To read mo
 ## About
 
 Richard Dancsi
-[www.wimagguc.com](http://www.wimagguc.com/)
+([www.wimagguc.com](http://www.wimagguc.com/))
 
 * twitter: [@wimagguc](http://twitter.com/wimagguc)
 * linkedin: [linkedin.com/in/richarddancsi](http://linkedin.com/in/richarddancsi)
@@ -57,7 +57,7 @@ Richard Dancsi
 
 
 Rafi Kamal
-[rafi-kamal.com](http://rafi-kamal.com/)
+([rafi-kamal.com](http://rafi-kamal.com/))
 
 * linkedin: [linkedin.com/in/rafikamal](http://linkedin.com/in/rafikamal)
 * gplus: [plus.google.com/+RafiKamal](https://plus.google.com/+RafiKamal) 
