@@ -5,6 +5,9 @@ Android code to display a location picker. The user can select a point on the ma
 (For the time being this project works as a wrapper for the jQuery latitude and longitude picker project. Read about it more: [github.com/wimagguc/jquery-latitude-longitude-picker-gmaps](https://github.com/wimagguc/jquery-latitude-longitude-picker-gmaps))
 
 
+## Screenshot
+[!Screenshot](https://raw.githubusercontent.com/rafi-kamal/android-latitude-longitude-picker/master/screenshot.png)
+
 ## Install
 
 Simply create an Android project and add the following files:
@@ -18,12 +21,14 @@ Simply create an Android project and add the following files:
 Then modify the AndroidManifest.xml to include this activity:
 
 ```xml
-<application …>
+<application>
   <activity
      android:name="com.wimagguc.locationpicker.LocationPickerActivity"
      android:uiOptions="splitActionBarWhenNarrow" />
 </application>
 ```
+
+See `cubi/rafi/locationpickertest/MainActivity` for exmaple usage.
 
 ## Compatibility
 
